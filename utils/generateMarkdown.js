@@ -66,17 +66,15 @@ function renderLicenseBadge(license) {
   return '';
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license, link) {
   return (
-    `- This project is available under the ${license}\n
-    - See [LICENSE](${link})
-    - For questions about forking and more, see (#Questions)`
+    `- This project is available under the ${license}<br/>- See [LICENSE](${link})<br/>- For questions about forking and more, see [Questions](#questions)`
 );
 }
 
@@ -85,6 +83,37 @@ function generateMarkdown(data) {
   return (
 `# ${data.title}
 
+## Description
+${data.description}<br/>
+
+${renderLicenseBadge(data.license)}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Question](#questions)
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## License
+${renderLicenseSection(data.license, data.link)}
+
+## Contributing 
+${data.contributing}
+
+## Tests
+${data.tests}
+
+## Questions
+If you have any questions and need to contact me, feel free to reach out at ${data.email}.<br/>
+Or visit my [Github](https://github.com/${data.username}}) for more information.
 `);
 }
 
