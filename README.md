@@ -1,9 +1,9 @@
-# readme generator
+# README Generator
 
 ## Description
-This is a project aiming to help users generate quality readme file based on their feedback from our prompt<br/>
+This project aim to provide developers with a tool to quickly generate a high quality README file so that they can focus on doing more code. By answering a number of questions, a quality README file will be generated based on the answer<br/>
 
-[![License: Open Font-1.1](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+[![License: Open Font-1.1](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -14,20 +14,20 @@ This is a project aiming to help users generate quality readme file based on the
 - [Question](#questions)
 
 ## Installation
-N/A
+You need to have Nodejs install in your computer. If you have not installed Nodejs, please click this link https://nodejs.org/en/download/current and follow the instructions. Then on GitHub, download this project to your local machine. Open the terminal at the downloaded project folder and run command 'npm install' to install all the dependencies.
 
 ## Usage
-Open terminal at the root folder of your project, run node index.js, answer all the question and see the magic happens~
+On the terminal at the root folder of the downloaded project, you can run `node index.js` to initiate the prompt in your terminal. Then proceed to answer all the questions given thoroughly. Once finish, a README file will be generated where you store the downloaded project.
 
-## License
-- This project is available under the Eclipse Public License 1.0<br/>- See [LICENSE](./license.txt)<br/>- For questions about forking and more, see [Questions](#questions)
+## License<br/>
+This project is available under the The MIT License<br/>- See [LICENSE](./LICENSE.txt)<br/>- For questions about forking and more, refer to [Questions](#questions)
 
 ## Contributing 
-See [Questions](#questions)
+If you want to contribute to the project, feel free to create a pull request detailing what you have worked on and give explanation on the benefits of the new feature
 
 ## Tests
-undefined
+N/A
 
 ## Questions
 If you have any questions and need to contact me, feel free to reach out at lehonguyen00@gmail.com.<br/>
-Or visit my [Github](https://github.com/honguyen00}) for more information.
+Or visit my [Github](https://github.com/honguyen00) for more information.

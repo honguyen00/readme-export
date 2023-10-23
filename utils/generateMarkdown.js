@@ -51,35 +51,33 @@ const licenses = {
     badge: "https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg",
     link: "https://opensource.org/licenses/MPL-2.0"
   },
-  "Unlicense License": {
-    badge: "https://img.shields.io/badge/license-Unlicense-blue.svg",
-    link: "http://unlicense.org/"
-  },
 }
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license) {
+  if (license != 'No license') {
     return `[![License: Open Font-1.1](${licenses[license].badge})](${licenses[license].link})`
   }
   return '';
 }
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license, link) {
-  return (
-    `- This project is available under the ${license}<br/>- See [LICENSE](${link})<br/>- For questions about forking and more, see [Questions](#questions)`
-);
+  if (license != 'No license') {
+    return (`## License
+      - This project is available under the ${license}
+      - See [LICENSE](${link.trim()})<br/>
+      - For questions about forking our project and more, refer to [Questions](#questions)`);
+  }
+  return '';
 }
 
-// TODO: Create a function to generate markdown for README
+// A function to generate markdown for README
 function generateMarkdown(data) {
+  const licenseSection = renderLicenseSection(data.license, data.link)
   return (
 `# ${data.title}
 
@@ -97,23 +95,22 @@ ${renderLicenseBadge(data.license)}
 - [Question](#questions)
 
 ## Installation
-${data.installation}
+${data.installation.trim()}
 
 ## Usage
-${data.usage}
+${data.usage.trim()}
 
-## License
-${renderLicenseSection(data.license, data.link)}
+${licenseSection.trim()}
 
 ## Contributing 
-${data.contributing}
+${data.contributing.trim()}
 
 ## Tests
-${data.tests}
+${data.tests.trim()}
 
 ## Questions
-If you have any questions and need to contact me, feel free to reach out at ${data.email}.<br/>
-Or visit my [Github](https://github.com/${data.username}}) for more information.
+If you have any questions and need to contact me, feel free to reach out at ${data.email.trim()}.<br/>
+Or visit my [Github](https://github.com/${data.username.trim()}) for more information.
 `);
 }
 
