@@ -19,8 +19,10 @@ You need to have Nodejs install in your computer. If you have not installed Node
 ## Usage
 On the terminal at the root folder of the downloaded project, you can run `node index.js` to initiate the prompt in your terminal. Then proceed to answer all the questions given thoroughly. Once finish, a README file will be generated where you store the downloaded project.
 
-## License<br/>
-This project is available under the The MIT License<br/>- See [LICENSE](./LICENSE.txt)<br/>- For questions about forking and more, refer to [Questions](#questions)
+## License
+This project is available under The MIT License
+- See [LICENSE](./LICENSE.txt)<br/>
+- For questions about forking our project and more, refer to [Questions](#questions)
 
 ## Contributing 
 If you want to contribute to the project, feel free to create a pull request detailing what you have worked on and give explanation on the benefits of the new feature

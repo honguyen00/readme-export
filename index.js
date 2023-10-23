@@ -8,7 +8,7 @@ const questions = ["What is the title of your project?","Provide a short descrip
 
 //Function to prompt users with question related to README file
 const promptUser = () => {
-    console.log('You will be propmt with a number of questionss to provide more details about your project. Please answer all the questions to generate your README file.\n')
+    console.log('You will be propmt with a number of questions to provide more details about your project. Please answer all the questions to generate your README file.\n')
     return inquirer.prompt([
         {
             type: 'input',

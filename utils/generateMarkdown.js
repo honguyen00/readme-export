@@ -67,10 +67,11 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license, link) {
   if (license != 'No license') {
-    return (`## License
-      - This project is available under the ${license}
-      - See [LICENSE](${link.trim()})<br/>
-      - For questions about forking our project and more, refer to [Questions](#questions)`);
+    return (
+`## License
+This project is available under ${license}
+- See [LICENSE](${link.trim()})<br/>
+- For questions about forking our project and more, refer to [Questions](#questions)`);
   }
   return '';
 }
@@ -92,7 +93,7 @@ ${renderLicenseBadge(data.license)}
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
-- [Question](#questions)
+- [Questions](#questions)
 
 ## Installation
 ${data.installation.trim()}
